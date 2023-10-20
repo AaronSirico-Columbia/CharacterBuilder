@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="CharacterBuilder.Views.UserControlCharacter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CharacterBuilder.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label x:Name="NameLabel" Content="NAME:" HorizontalAlignment="Left" Height="38" Margin="5,33,0,0" VerticalAlignment="Top" Width="91" FontSize="24"/>
+        <TextBox x:Name="NameTextBox"  HorizontalAlignment="Left" Height="32" Margin="98,39,0,0" TextWrapping="Wrap" Text="{Binding Path=Name}" VerticalAlignment="Top" Width="106" FontSize="20" />
+        <Label x:Name="CharacterLevel" Content="LEVEL:" HorizontalAlignment="Left" Height="38" Margin="7,82,0,0" VerticalAlignment="Top" Width="91" FontSize="24"/>
+        <TextBox x:Name="LevelTextBox" HorizontalAlignment="Left" Height="32" Margin="99,90,0,0" TextWrapping="Wrap" Text="{Binding Path=Level}" VerticalAlignment="Top" Width="65" FontSize="20"/>
+        <Slider x:Name="AgeSlider" HorizontalAlignment="Left" Height="32" Margin="77,201,0,0" VerticalAlignment="Top" Width="147" Value="{Binding Path=Age}"/>
+        <Label x:Name="AgeTitle" Content="AGE:OnDefeatedCommand" HorizontalAlignment="Right" Height="38" Margin="0,185,731,0" VerticalAlignment="Top" Width="60" FontSize="24"/>
+        <Button x:Name="LevelUpButton" Content="LevelUp"  HorizontalAlignment="Left" Height="47" Margin="13,241,0,0" VerticalAlignment="Top" Width="114" Command="{Binding LevelUpCommand}"/>
+        <Button x:Name="SaveButton" Content="Save"  HorizontalAlignment="Left" Height="22" Margin="13,310,0,0" VerticalAlignment="Top" Width="57" Command="{Binding SaveCommand}" Click="SaveButton_Click"/>
+        <Button x:Name="LoadButton" Content="Load"  HorizontalAlignment="Left" Height="22" Margin="77,310,0,0" VerticalAlignment="Top" Width="57" Command="{Binding LoadCommand}"/>
+        <Button x:Name="PrintButton" Content="Print"  HorizontalAlignment="Left" Height="22" Margin="77,310,0,0" VerticalAlignment="Top" Width="57" Command="{Binding PrintCommand}"/>
+        <Button x:Name="DemoteButton" Content="Demote"   HorizontalAlignment="Left" Height="47" Margin="143,242,0,0" VerticalAlignment="Top" Width="114" Command="{Binding DemoteCommand}" RenderTransformOrigin="0.294,0.533"/>
+        <TextBox x:Name="AgeTextBox" HorizontalAlignment="Left" Height="32" Margin="230,196,0,0" TextWrapping="Wrap" Text="{Binding Path=Age}" VerticalAlignment="Top" Width="65" FontSize="20"/>
+        <Label x:Name="XPTitle" Content="XP:" HorizontalAlignment="Right" Height="38" Margin="0,135,731,0" VerticalAlignment="Top" Width="60" FontSize="24"/>
+        <Slider x:Name="XPSlider" HorizontalAlignment="Left" Height="32" Margin="76,152,0,0" VerticalAlignment="Top" Width="147" Value="{Binding XP}"/>
+        <TextBox x:Name="XPTextBox" HorizontalAlignment="Left" Height="32" Margin="230,144,0,0" TextWrapping="Wrap" Text="{Binding XP}" VerticalAlignment="Top" Width="65" FontSize="20"/>
+    </Grid>
+</UserControl>
